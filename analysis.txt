@@ -1,0 +1,46 @@
+"On a high level, these neural networks learn by
+taking in any number of input values and applying weights to the nodes as they are
+passed into the hidden layers."
+
+^ I'm not sure this is 100% accurate. You do continue on to describe how they process inputs//generate outputs, but I wouln't necissarily call that part learning. The learning happens during the trainig process, whether its by backpropogation/gradient descent or another algorithm.
+
+"Weights are specific values that are tuned during the
+learning process to achieve the desired output values. After the weights are applied to
+the values passing through the current hidden layer and an activation function is
+applied to determine if the node will be “active” or not. This process happens at each
+subsequent hidden layer until the final value reaches the output layer and a final
+activation function is applied."
+
+^ Second sentence shouldn't have the word 'and'
+Also, you're right about the activation function, but I think it's also more important than that. It also normalizes the values to be in a set range, and without an activation function the network would basically just be a linear regression model. Like it wouldn't be able to perform any non-linear operations within itself. And would not be able to 'learn' complex patterns.
+
+Double also, I don't think you're incorrect anywhere in your description of how nets work. I feel like theres prolly a more concise way of putting it. Something like, 'each neuron takes in the weighted sum of all outputs from the previous layer of neurons, applies the bias & activation function, and boom we've got the neuron's output.'
+
+"Training a model is the process by which the neural network is given a large
+amount of labeled and unlabeled data so that it can learn what the desired output is in
+order to give an accurate output for any given input."
+
+^ There are lots and lots and lots of training algorithms. All with varying levels of supervision, and differeing data requirements. Often they will be optimizing some kind of loss function. E.g. you feed a value thru the network, and calculate the error in its response, given you know what the response should have been. From there a really common thing is to use backpropogation to adjust the weights and biases of each neuron in the network to reduce error.
+There are other algos too, like genetic algorithms, or stochastic gradient descent, or i think q learning. 
+I mean techinically a training algorithm would be to randomize all the weights & biases, until you get one that matches your dataset really well. That would just be a horrible algorithm.
+
+"Training a model is the process by which the neural network is given a large
+amount of labeled and unlabeled data so that it can learn what the desired output is in
+order to give an accurate output for any given input. In order to get the best results
+from training, the model requires massive amounts of quality data, and processing that
+data can require a significant amount of power. In recent years, these problems have
+been mitigated using cloud computing technology and using pre-trained models that
+are possible through the process of transfer learning (Wolfewicz). These processes have
+made using artificial intelligence and machine learning more accessible to companies
+and consumers."
+
+^ Yes, i think its usually all labeled data though, especially with things like gradient descent, cus you always need to know what the output should have been.
+Also idk if you want more info about this, but ill attach a pdf of a research paper by the team who made WizardLM, basically they used LLMs to create high-quality//high-complexity training data to train new models with, and it gave really really incredible results.
+
+"ChatGPT is a
+sophisticated chatbot that utilizes OpenAI's generative pre-trained transformer (GPT)
+3.5 model to generate intelligent responses to user input."
+
+^ You only touch on this a little, but transformers are all the rage nowadays. ChatGPT is built off a pre-trained transformer model like u said. I'll also attach a paper called 'Attention Is All You Need'. It is a paper from 2017 that lays out the transformer model architecture, and is arguably one of the most imporant ML papers ever. So you might get brownie points for referencing it.
+
+Also when talking about the impacts of AI in general, I think the biggest thing is that it allows for less human input into the economy, with the same or greater economic output. This is a huge deal. Up until like 200-300 years ago, the only way to grow an economy, or grow a GDP, was to have more human labor input. You needed more workers to produce more. Now though, that axiom no longer holds true. The economy won't always need human input. Which is fucking crazy. OpenAI knows this, they funded the largest UBI study ever, which wraps up this year.

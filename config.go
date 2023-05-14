@@ -24,7 +24,7 @@ func ConfigDirChecker() (bool, error) {
 		fmt.Println("Error getting config dir", err)
 		return false, err
 	}
-	filePath := filepath.Join(dataDir, "qdm", "data.txt")
+	filePath := filepath.Join(dataDir, "qdm", "configdata.txt")
 	_, err = os.Stat(filePath)
 	if err == nil {
 		return true, nil
@@ -108,10 +108,4 @@ func CreateDefaultConfig() {
 		os.Exit(1)
 	}
 	fmt.Println("Successfully created config file.")
-	readData, err := os.ReadFile(configFilePath)
-	if err != nil {
-		fmt.Println("Error during test read of new config file", err)
-		os.Exit(1)
-	}
-	fmt.Println("Data from config:", string(readData))
 }
