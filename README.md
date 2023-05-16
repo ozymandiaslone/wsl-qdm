@@ -1,7 +1,8 @@
 # wsl-qdm
 ### What is qdm?
-- A command line tool for easily sending files in between your WSL and Windows File Systems.
+- A command line tool for use in WSL to easily send files between your WSL and Windows file systems.
 - Currently, qdm is under development, and only supports a limited number of features.
+- Feel free to open a PR for anything.
 
 # Usage
 After installing qdm, you can use it to send files between your WSL and Windows File Systems.
