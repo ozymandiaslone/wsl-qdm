@@ -3,7 +3,7 @@
 - A command line tool for easily sending files in between your WSL and Windows File Systems.
 - Currently, qdm is under development, and only supports a limited number of features.
 
-# Useage
+# Usage
 After installing qdm, you can use it to send files between your WSL and Windows File Systems.
 The `send` command acts like the unix `cp` command, though only takes in the path of the source file or directory. This file/dir will be copied into the preconfigured Windows file system folder. 
 By default, all files will be sent to `C:\Users\<your-windows-username>\Documents\fromWsl`
